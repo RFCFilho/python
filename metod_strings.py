@@ -15,3 +15,10 @@ print(mensagem.find("Muito"))
 
 #O metodo que troca um string por outra é o replace print(nome da variável.replace('Muito', 'Muitissímo')) = Comer é Muitissímo Bom
 print(mensagem.replace('Muito', 'Muitissímo'))
+
+#O metodo strip remove qualquer espaço antes do primeiro caracter "print(nome da variavel.strip())"
+mensagem1 = "      varios espaços após as áspas"
+print(mensagem1)#      varios espaços após as áspas
+print(mensagem1.strip())#varios espaços após as áspas
+
+
