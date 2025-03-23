@@ -1,0 +1,27 @@
+/* Estilo para o menu */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Torna os itens da lista horizontais */
+}
+
+li {
+    margin-right: 20px; /* Espaçamento entre os itens */
+}
+
+a {
+    color: rgb(236, 213, 213); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px;
+    display: block; /* Faz o link preencher todo o item da lista */
+}
+
+a:hover {
+    background-color: #575757; /* Cor de fundo ao passar o mouse */
+}

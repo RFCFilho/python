@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="menu.css">    
+    <title>Estudando Python</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="quest1.py">Questão1</a></li>
+                <li><a href="quest2.py">Questão2</a></li>
+                <li><a href="quest3.py">Questão3</a></li>
+                <li><a href="quest4.py">Questão4</a></li>
+                <li><a href="quest5.py">Questão5</a></li>
+                <li><a href="quest6.py">Questão6</a></li>
+                <li><a href="quest7.py">Questão7</a></li>
+                <li><a href="quest8.py">Questão8</a></li>
+                <li><a href="quest9.py">Questão9</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+   <h1>Git</h1> 
+   <p>
+    <table border="1">
+        <thead>
+          <tr>
+   <p> Ah, entendi! Vou te guiar em como criar um repositório Git remoto desde o início e enviar seus arquivos para ele. </p>
+   <p>Aqui estão os passos completos para criar e configurar um repositório remoto no GitHub e subir seu código até lá.
+
+    ### Passos:</p>
+<li>
+    1. **Criar um repositório no GitHub**:
+
+   - Acesse o [GitHub](https://github.com) e faça login na sua conta.
+   - Clique no ícone `+` no canto superior direito e escolha **"New repository"**.
+   - Preencha o nome do repositório e, se desejar, marque a opção para inicializá-lo com um README. Caso contrário, deixe a opção sem marcação.
+   - Clique em **Create repository**.
+</li><br>
+
+2. **Configurar o repositório local (no VS Code)**:
+
+   - Abra o terminal do VS Code (ou o terminal do seu sistema).
+   - Navegue até a pasta onde estão seus arquivos de projeto com o comando `cd`:
+   
+     ```bash
+     cd caminho/do/seu/projeto
+     ```
+
+   - Caso ainda não tenha iniciado um repositório Git local, execute o comando:
+
+     ```bash
+     git init
+     ```
+
+   Isso cria um repositório Git local na sua pasta.
+   <br>
+
+<br>
+3. **Adicionar os arquivos ao Git**:
+
+   Agora adicione todos os arquivos que você deseja enviar ao repositório com o comando:
+
+   ```bash
+   git add .<br>
+   ```
+<br>
+4. **Configurar nome de usuário e e-mail (se necessário)**:
+
+   Se ainda não configurou seu nome e e-mail para o Git, execute os seguintes comandos:
+
+   ```bash
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seuemail@example.com"<br>
+   ```
+<br>
+5. **Fazer o primeiro commit**:
+
+   Faça o primeiro commit com a mensagem que você desejar (por exemplo, "Primeiro commit"):
+
+   ```bash
+   git commit -m "Primeiro commit"<br>
+   ```
+<br>
+6. **Adicionar o repositório remoto (no GitHub)**:
+
+   - Agora, no GitHub, ao criar o repositório, você verá instruções para adicionar o repositório remoto. A URL do repositório será algo como `https://github.com/usuario/nome-do-repositorio.git`.
+   
+   No terminal, adicione o repositório remoto com o seguinte comando (substitua a URL pela do seu repositório no GitHub):
+
+   ```bash
+   git remote add origin https://github.com/usuario/nome-do-repositorio.git <br>
+   ```
+<br>
+7. **Enviar os arquivos para o GitHub**:
+
+   Com o repositório remoto configurado, agora envie seus commits para o repositório no GitHub com o comando:
+
+   ```bash
+   git push -u origin master
+   ```
+
+   Ou, se o seu repositório remoto usar `main` (ao invés de `master`), use:
+
+   ```bash
+   git push -u origin main <br>
+   ```
+<br>
+8. **Confirmar no GitHub**:
+
+   Após rodar esse comando, seus arquivos devem estar no repositório remoto. Acesse a página do repositório no GitHub e você verá seus arquivos.
+
+---<br>
+</ul>
+<h2>### Resumo dos comandos:</h2>
+<ul>
+
+<li>1. **Iniciar repositório local**:
+<p></p>
+   ```bash
+   git init
+   ```
+</li>
+<li>2. **Adicionar arquivos ao Git**:
+<p>
+    ``bash
+    git add .
+  ```
+</p>
+  
+</li>
+<li>3. **Configurar usuário e e-mail**:
+<p>```bash
+    git config --global user.name "Seu Nome"
+    git config --global user.email "seuemail@example.com"
+</p>
+   
+</li>
+<p>``bash
+    git commit -m "Primeiro commit"
+
+</p>
+    <li>
+<p> 
+         4. **Commitar arquivos**:
+</p>
+</li>
+<li>
+    5. **Adicionar repositório remoto**:.
+<p>```bash
+    git remote add origin https://github.com/usuario/nome-do-repositorio.git</p>
+
+</li>
+<li>6. **Enviar para o GitHub**:
+<p>```bash
+    git push -u origin master
+    ```
+ 
+    Ou, se for `main`:
+ 
+    ```bash
+    git push -u origin main
+</p>
+    
+</li>
+
+</ul>
+        </tr>
+    </thead>
+<tbody>
+    <h1>Segundo passo git</h1>
+    <table>
+        <ul>
+            <li>
+                Olá! Se você criou uma nova branch chamada `develop` e fez alterações nela, e agora quer enviar esses arquivos para a branch `master`, você vai precisar **mesclar (merge)** a branch `develop` na `master` ou **fazer um rebase**. Vou te explicar os dois métodos para que você escolha o que for mais adequado.
+
+### Passos para **mesclar (merge)** a `develop` na `master`:
+
+1. **Verificar em qual branch você está**:
+   
+   Primeiro, verifique em qual branch você está com o comando:
+
+   ```bash
+   git branch
+   ```
+
+   Isso vai listar todas as branches e marcar a branch atual com um `*`.
+
+   Caso você esteja na branch `develop`, continue para o próximo passo. Caso contrário, se você estiver em uma branch diferente, mude para a `master` com o comando:
+
+   ```bash
+   git checkout master
+   ```
+
+2. **Atualizar a branch `master`** (caso necessário):
+
+   Antes de mesclar, é uma boa prática garantir que a `master` esteja atualizada com a versão mais recente do repositório remoto. Para isso, execute:
+
+   ```bash
+   git pull origin master
+   ```
+
+3. **Mesclar a branch `develop` na `master`**:
+
+   Agora, estando na branch `master`, você pode mesclar a branch `develop` nela. Para isso, use o comando:
+
+   ```bash
+   git merge develop
+   ```
+
+   Isso vai aplicar as mudanças feitas na `develop` para a `master`.
+
+4. **Resolver conflitos (se houver)**:
+
+   Se houver conflitos de merge (quando o Git não consegue combinar automaticamente as alterações), ele vai te avisar e você vai precisar resolvê-los manualmente. Após resolver os conflitos, marque os arquivos como resolvidos com:
+
+   ```bash
+   git add nome-do-arquivo
+   ```
+
+5. **Commitar a mesclagem (se necessário)**:
+
+   Se a mesclagem gerar um commit (normalmente acontece se houver conflitos ou se você precisar adicionar algo mais), finalize com:
+
+   ```bash
+   git commit -m "Mesclando develop na master"
+   ```
+
+6. **Enviar as alterações para o repositório remoto**:
+
+   Agora, envie a branch `master` (com as alterações da `develop`) para o repositório remoto:
+
+   ```bash
+   git push origin master
+   ```
+
+### Passos para **fazer um rebase** de `develop` na `master`:
+
+O **rebase** é uma alternativa ao **merge** e mantém o histórico linear. Aqui estão os passos para usá-lo:
+
+1. **Verificar em qual branch você está**:
+
+   Novamente, use o comando `git branch` para confirmar em qual branch você está. Se estiver na branch `develop`, siga para o próximo passo. Caso contrário, mude para a `develop`:
+
+   ```bash
+   git checkout develop
+   ```
+
+2. **Fazer o rebase da `develop` na `master`**:
+
+   Execute o comando a seguir para aplicar as alterações da branch `develop` diretamente sobre a `master`, criando um histórico linear:
+
+   ```bash
+   git rebase master
+   ```
+
+3. **Resolver conflitos (se houver)**:
+
+   Caso haja conflitos durante o rebase, o Git vai interromper e pedir para você resolvê-los. Após resolver os conflitos, marque os arquivos como resolvidos com:
+
+   ```bash
+   git add nome-do-arquivo
+   ```
+
+   Depois continue o rebase com:
+
+   ```bash
+   git rebase --continue
+   ```
+
+4. **Ir para a branch `master`**:
+
+   Após o rebase, mude para a branch `master` com:
+
+   ```bash
+   git checkout master
+   ```
+
+5. **Mesclar as alterações da `develop`**:
+
+   Agora, basta mesclar a branch `develop` (que está com as alterações da `master`) na `master` com o comando:
+
+   ```bash
+   git merge develop
+   ```
+
+   Se não houver conflitos, a mesclagem vai ser rápida.
+
+6. **Enviar para o repositório remoto**:
+
+   Por fim, envie as mudanças para o repositório remoto:
+
+   ```bash
+   git push origin master
+   ```
+
+### Resumo:
+
+- **Usando `merge`**: Mescla a branch `develop` na `master`.
+- **Usando `rebase`**: Aplica as mudanças da `develop` na `master` criando um histórico linear.
+
+Se você precisar de mais ajuda ou tiver alguma dúvida, é só me chamar!
+            </li>
+        </ul>
+    </table>
+</body>
+</html>
