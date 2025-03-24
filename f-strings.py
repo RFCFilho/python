@@ -1,7 +1,8 @@
 nome = 'Roberto'
+sobrenome = 'Fernandes'
 idade = 38
 
-print(f'Meu nome é {nome} e eu tenho {idade} anos de idade')
+print(f'Meu nome é {nome} {sobrenome} e eu tenho {idade} anos de idade')
 
 # f string formata e concatena o texto: 
 #sintax print(f'Tudo aui dentro')

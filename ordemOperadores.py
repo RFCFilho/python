@@ -3,8 +3,8 @@
 #1º Parênteses ( );
 #2º Exponenciação **;
 #3º Multiplicação *;
-#4º Divisão ;
-#5º Divisão inteira duas barras;
+#4º Divisão /;
+#5º Divisão inteira //;
 #6º módulo %;
 #7º Adição + ;
 #8º Subtração -

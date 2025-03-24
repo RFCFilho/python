@@ -21,5 +21,13 @@ if renda_acima_perm1 or nome_limpo1: # Credito aprovado, uma ou outra são verda
 else:
     print("Crédito negado!")
 
+operator = "banana" == 'Banana'
+print(operator)
 
+bissexto = int(input("Digite aqui o ano"))
+
+if bissexto % 4 == 0 or bissexto != 100 and bissexto % 400 == 0:
+    print("Este ano é bisseto")
+else:
+    print("Este ano não é bissexto")
 
